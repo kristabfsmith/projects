@@ -1,0 +1,6 @@
+---
+- name: Patching - Ensure that yum security module is installed
+  yum: pkg=yum-plugin-security state=installed disable_gpg_check=yes
+
+- name: Patching - Install all high security patches
+  command: yum update 
